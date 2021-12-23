@@ -29,7 +29,7 @@ client.once('ready', c => {
 client.on('messageCreate', async (message) => {
     if (message.author.bot) { return };
     if (message.channel.type !== 'GUILD_TEXT') {
-        return message.reply({ content: 'Je suis un bot. Je ne répondrais pas ici !', allowedMentions: { repliedUser: false }})
+        return message.reply({ content: 'cet utilisateur est un bot, impossible d'effectuer cette commande.', allowedMentions: { repliedUser: false }})
     }
     if (!message.content.startsWith(client.prefix)) return;
 
